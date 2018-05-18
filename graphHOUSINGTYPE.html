@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    body {
+        font: 10px sans-serif;
+    }
+    .navbar {
+        overflow: hidden;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar a {
+        float: right;
+        font-size: 16px;
+        color: #a184b2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar .item_nohover{
+        float: right;
+        font-size: 16px;
+        color: #666666;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .item {
+        float: right;
+        overflow: hidden;
+    }
+
+    .item_nohover {
+        float: right;
+        overflow: hidden;
+    }
+
+    .item_l {
+        float: left;
+        overflow: hidden;
+    }
+
+    .item .itembtn {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: #666666;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .item .itemCur {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: #6dd895;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .item_nohover .itembtn {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: #666666;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .item_l .itembtn {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: #666666;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar .item:hover .itembtn {
+        background-color: white;
+        color: #6dd895;
+        text-decoration: underline;
+    }
+
+    .navbar .item_l:hover .itembtn {
+        background-color: white;
+        color: #6dd895;
+        text-decoration: underline;
+    }
+
+    .navbar a:hover {
+        background-color: white;
+        color: #6dd895;
+        text-decoration: underline;
+    }
+
+    .navbar .item:hover .itemCur {
+        background-color: white;
+        color: #6dd895;
+        text-decoration: underline;
+    }
+
+    .legend rect {
+        fill-opacity: 0.75;
+    }
+
+    .legend:hover rect {
+        fill-opacity: 1;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+        display: none;
+    }
+
+    div.tooltip {
+        position: absolute;
+        text-anchor: middle;
+        width: 100px;
+        height: 28px;
+        padding: 0px;
+        font: 11px sans-serif;
+        border: 0px;
+        font-weight: bold;
+        border-radius: 8px;
+        pointer-events: none;
+        fill: black;
+    }
+</style>
+<body>
+    <div class="navbar">
+        <div class="item_l">
+            <a href="neighborhoodsMap.html">MAP</a>
+        </div>
+        <div class="item">
+            <button class="itembtn" onclick="getResult('SAFETY');">SAFETY 
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+        <div class="item">
+            <button class="itembtn" onclick="getResult('TRAFFIC');">TRAFFIC
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+        <div class="item">
+            <button class="itemCur" onclick="getResult('HOUSINGTYPE');">HOUSING TYPE 
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div> 
+        <div class="item">
+            <button class="itembtn" onclick="getResult('ENTERTAINMENT');">ENTERTAINMENT 
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div> 
+        <div class="item">
+            <button class="itembtn" onclick="getResult('INCOME');">INCOME 
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div> 
+        <div class="item">
+            <button class="itembtn" onclick="getResult('EDUCATION');">EDUCATION
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+        <div class="item_nohover">Type</div> 
+    </div>
+    <br>
+    <br>
+
+    <div id="pieChart" align="center"></div>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script>
+        var selectedNeighborhoods = new Array();
+        getSelectedNeighborhoods();
+        function getSelectedNeighborhoods() {
+            arr = sessionStorage.getItem("selectedNeighborhoods");
+            for (var i = 0; i < arr.length; i += 2)
+                selectedNeighborhoods[i / 2] = arr[i];
+        }
+        console.log(selectedNeighborhoods);
+        function getResult(type) {
+            var targetFile = "graph" + type + ".html";
+            sessionStorage.setItem("selectedNeighborhoods", selectedNeighborhoods);
+            console.log(selectedNeighborhoods);
+            window.open(targetFile,"_self");
+        }
+
+    var flagType = null;
+
+    var margin = { top: 20, right: 20, bottom: 30, left: 40 },
+        width = 1060 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    var x0 = d3.scale.ordinal()
+        .rangeRoundBands([0, width - 100], .1);
+
+    var x1 = d3.scale.ordinal();
+
+    var y = d3.scale.linear()
+        .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x0)
+        .tickSize(0)
+        .orient("bottom");
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+    var color = d3.scale.ordinal()
+        .range(["#a184b2", "#28a0b2", "#3adbdb", "#6dd895", "#b7d36a", "#d1d3d4"]);
+
+    var svg = d3.select('#pieChart').append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var divtag = d3.select("#pieChart").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 1);
+
+    d3.json("data/AptType.json", function(error, data) {
+
+        var temp = Array();
+        for (var i = 0; i < selectedNeighborhoods.length; i++) {
+            if (selectedNeighborhoods[i] == 1) {
+                temp.push(data[i]);
+            }
+        }
+        data = temp;
+
+        var categoriesNames = data.map(function(d) { return d.categorie; });
+        var rateNames = data[0].values.map(function(d) { return d.rate; });
+
+        x0.domain(categoriesNames);
+        x1.domain(rateNames).rangeRoundBands([0, x0.rangeBand()]);
+        y.domain([0, d3.max(data, function(categorie) { return d3.max(categorie.values, function(d) { return d.value; }); })]);
+
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + -20 + ")")
+            .call(xAxis)
+            .style('font-family', 'open sans')
+            .style('font-size', '24px')
+            .style('font-weight', 'normal');
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .style('opacity', '0')
+            .call(yAxis)
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .style('font-weight', 'bold')
+            .text("Value");
+
+        svg.select('.y').transition().duration(500).delay(1300).style('opacity', '1');
+
+        var x0_var, d_rate, d_val;
+        var flag = 1;
+        //var bar_width = x1("1 Bed 1 Bath") - x1("Studio");
+        var bw = [102, 69, 58, 52];
+        //console.log("!!!: " + bar_width);
+
+        var slice = svg.selectAll(".slice")
+            .data(data)
+            .enter().append("g")
+            .attr("class", "g")
+            .attr("transform", function(d) {
+                return "translate(" + x0(d.categorie) + ",0)";
+            })
+            .on("mouseover", function(d, i) {
+                //console.log("x0: " + x0(d.categorie));
+                //console.log("Pos: " + (x0(d.categorie) + x1(d_rate)))
+                divtag.transition().duration(100).style("opacity", 9);
+                /*
+                                divtag.html(d_val)
+                                    .style("transform", "translate(0, -200)")
+                                    .style("left", (x0(d.categorie) + x1(d_rate) + bw[data.length - 1]) + "px")
+                                    .style("top", y(d_val) + 10 + "px");*/
+            });
+
+        slice.selectAll("rect")
+            .data(function(d) {
+                //return d;
+                return d.values;
+            })
+            .enter().append("rect")
+            .attr("width", x1.rangeBand())
+            .attr("x", function(d) {
+                console.log(x1(d.rate));
+                return x1(d.rate);
+            })
+            .style("fill", function(d) { return color(d.rate) })
+            .attr("y", function(d) { return y(0); })
+            .attr("height", function(d) { return height - y(0); })
+            .on("mouseover", function(d, i) {
+                //d_rate = d.rate;
+                //d_val = d.value;
+                //console.log("d: " + d.rate + ", x1: " + x1(d.rate));
+
+                //divtag.transition().duration(100).style("opacity", 9);
+
+                divtag.html(d.value)
+                    .style("transform", "translate(0, -200)")
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 30) + "px");
+                d3.select(this).style("fill", d3.rgb(color(d.rate)).darker(0.5));
+            })
+            .on("mouseout", function(d) {
+                divtag.transition().duration(500).style("opacity", 0);
+                d3.select(this).style("fill", color(d.rate));
+            });
+
+        slice.selectAll("rect")
+            .transition()
+            .delay(function(d) { return Math.random() * 1000; })
+            .duration(1000)
+            .attr("y", function(d) { return y(d.value); })
+            .attr("height", function(d) { return height - y(d.value); });
+
+        //Legend
+        var legend = svg.selectAll(".legend")
+            .data(data[0].values.map(function(d) { return d.rate; }).reverse())
+            .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", function(d, i) { return "translate(20," + i * 20 + ")"; })
+            .style("opacity", "0");
+
+        legend.append("rect")
+            .attr("x", width - 18)
+            .attr("width", 20)
+            .attr("height", 20)
+            .style("fill", function(d) { return color(d); });
+
+        legend.on('click', function(type) {
+            if (flagType == type) {
+                d3.selectAll('.g rect')
+                    .style('opacity', 1);
+
+                d3.selectAll('.legend rect')
+                    .style('opacity', 1);
+
+                flagType = null;
+            } else {
+                d3.selectAll('.g rect')
+                    .style('opacity', 0.15)
+                    .filter(function(d) {
+                        return d.rate == type;
+                    })
+                    .style('opacity', 1);
+
+                d3.selectAll('.legend rect')
+                    .style('opacity', 0.15)
+                    .filter(function(d) {
+                        return d == type;
+                    })
+                    .style('opacity', 1);
+
+                flagType = type;
+            }
+        });
+
+        legend.append("text")
+            .attr("x", width - 24)
+            .attr("y", 9)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .style("font-size", "18px")
+            .style("font-family", "open sans")
+            .text(function(d) { return d; });
+
+        legend.transition().duration(500).delay(function(d, i) { return 1300 + 100 * i; }).style("opacity", "1");
+
+    });
+    </script>
+</body>

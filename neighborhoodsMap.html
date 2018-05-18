@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Columbus Neighborhoods Map</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+  	<h2 style="auto" align="center">Welcome to Columbus</h2>
+    <div id="map" style="width:1000px; height:600px; margin:0 auto;"></div>
+    <script>
+      	var map;
+      	var mapCenter = {lat: 39.98600, lng: -82.997018};
+      	var selectedNeighborhoods = new Array();
+      	var numSelected = 0;
+      	var maxNum = 20;
+      	var numLimited = 4;
+      	for (var i = 0; i < maxNum; i++) {
+        	selectedNeighborhoods[i] = 0;
+      	}
+
+      	function CenterControl(controlDiv, map) {
+
+        	// Set CSS for the control border.
+        	var controlUI = document.createElement('div');
+        	controlUI.style.backgroundColor = '#fff';
+        	controlUI.style.border = '2px solid #fff';
+        	controlUI.style.borderRadius = '3px';
+        	controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+        	controlUI.style.cursor = 'pointer';
+        	controlUI.style.marginBottom = '22px';
+        	controlUI.style.textAlign = 'center';
+        	controlUI.title = 'Click to recenter the map';
+        	controlDiv.appendChild(controlUI);
+
+        	// Set CSS for the control interior.
+        	var controlText = document.createElement('div');
+        	controlText.style.color = 'rgb(25,25,25)';
+        	controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+        	controlText.style.fontSize = '16px';
+        	controlText.style.lineHeight = '38px';
+        	controlText.style.paddingLeft = '5px';
+        	controlText.style.paddingRight = '5px';
+        	controlText.innerHTML = 'Center Map';
+        	controlUI.appendChild(controlText);
+
+        	// Setup the click event listeners: simply set the map to Chicago.
+        	controlUI.addEventListener('click', function() {
+          		map.setCenter(mapCenter);
+        	});
+
+      	}
+
+      	function SelectedNeighborhoodControl(controlDiv, map) {
+
+        	// Set CSS for the control border.
+        	var controlUI = document.createElement('div');
+        	controlUI.style.backgroundColor = '#fff';
+        	controlUI.style.border = '2px solid #fff';
+        	controlUI.style.borderRadius = '3px';
+        	controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+        	controlUI.style.cursor = 'pointer';
+        	controlUI.style.marginBottom = '22px';
+        	controlUI.style.textAlign = 'left';
+        	controlUI.title = 'Compare selected neighborhoods';
+        	controlDiv.appendChild(controlUI);
+
+        	// Set CSS for the control interior.
+        	var controlText1 = document.createElement('div');
+        	controlText1.style.color = 'rgb(25,25,25)';
+        	controlText1.style.fontFamily = 'Roboto,Arial,sans-serif';
+        	controlText1.style.fontSize = '16px';
+        	controlText1.style.lineHeight = '38px';
+        	controlText1.style.paddingLeft = '5px';
+        	controlText1.style.paddingRight = '5px';
+        	controlText1.innerHTML = 'Choose 1 - 4 neighborhoods';
+        	var controlText2 = document.createElement('div');
+        	controlText2.style.color = 'rgb(162,134,178)';
+        	controlText2.style.fontFamily = 'Roboto,Arial,sans-serif';
+        	controlText2.style.fontSize = '14px';
+        	controlText2.style.lineHeight = '38px';
+        	controlText2.style.paddingLeft = '5px';
+        	controlText2.style.paddingRight = '5px';
+        	controlText2.innerHTML = 'Columbus OH';
+        	controlUI.appendChild(controlText1);
+        	controlUI.appendChild(controlText2);
+
+        	// Setup the click event listeners: simply set the map to Chicago.
+        	controlUI.addEventListener('click', function() {
+          		sessionStorage.setItem("selectedNeighborhoods", selectedNeighborhoods);
+          		console.log(selectedNeighborhoods);
+          		window.open("graphHOUSINGTYPE.html","_self");
+        	});
+
+      	}
+
+      	function initMap() {
+        	map = new google.maps.Map(document.getElementById('map'), {
+          		zoom: 12,
+          		center: mapCenter,
+        	});
+
+        	map.data.setStyle(function(feature) {
+          		var color = 'blue';
+          		return {
+            		fillColor: color,
+            		strokeWeight: 1
+          		};
+        	});
+
+        	var area0 = [
+          		{lat: 40.011440, lng: -82.947900}, // north west
+          		{lat: 40.000823, lng: -82.948286}, // south west
+          		{lat: 40.000165, lng: -82.936184}, // south east
+          		{lat: 40.010849, lng: -82.935197}  // north east
+        	];
+        	var area4 = [
+          		{lat: 40.051776, lng: -82.919891}, // north west
+          		{lat: 40.048532, lng: -82.920052}, // south west
+          		{lat: 40.048203, lng: -82.911608}, // south east
+          		{lat: 40.051612, lng: -82.911780}  // north east
+        	];
+        	var area12 = [
+          		{lat: 40.064914, lng: -82.889900}, // north west
+          		{lat: 40.056637, lng: -82.886124}, // south west
+          		{lat: 40.055750, lng: -82.867284}, // south east
+          		{lat: 40.066654, lng: -82.866383}  // north east
+        	];
+        	var area1 = [
+          		{lat: 40.076854, lng: -83.035740}, // north west
+          		{lat: 40.018246, lng: -83.024410}, // south west
+          		{lat: 40.019429, lng: -82.996772}, // south east
+          		{lat: 40.076197, lng: -83.000549}  // north east
+        	];
+        	var area13 = [
+          		{lat: 40.047908, lng: -82.998823}, // north west
+          		{lat: 40.014982, lng: -82.996506}, // south west
+          		{lat: 40.013602, lng: -82.964748}, // south east
+          		{lat: 40.049616, lng: -82.952561}  // north east
+        	];
+        	var area11 = [
+          		{lat: 40.139524, lng: -83.001900}, // north west
+          		{lat: 40.136276, lng: -83.004518}, // south west
+          		{lat: 40.134636, lng: -82.971559}, // south east
+          		{lat: 40.138769, lng: -82.973963}  // north east
+        	];
+        	var area7 = [
+          		{lat: 40.157176, lng: -82.994934}, // north west
+          		{lat: 40.151075, lng: -82.997338}, // south west
+          		{lat: 40.149238, lng: -82.955538}, // south east
+          		{lat: 40.156126, lng: -82.970129}  // north east
+        	];
+        	var area19 = [
+          		{lat: 40.018471, lng: -83.015210}, // north west
+          		{lat: 40.006540, lng: -83.022076}, // south west
+          		{lat: 40.005685, lng: -82.995769}, // south east
+          		{lat: 40.019260, lng: -82.996799}  // north east
+        	];
+        	var area15 = [
+          		{lat: 40.014982, lng: -82.996506}, // north west
+          		{lat: 39.991512, lng: -82.985455}, // south west
+          		{lat: 39.990789, lng: -82.972409}, // south east
+          		{lat: 40.013603, lng: -82.964942}  // north east
+        	];
+        	var area17 = [
+          		{lat: 39.994753, lng: -83.007022}, // north west
+          		{lat: 39.987158, lng: -83.005584}, // south west
+          		{lat: 39.986763, lng: -82.994469}, // south east
+          		{lat: 39.994243, lng: -82.995134}  // north east
+        	];
+        	var area10 = [
+          		{lat: 39.994241, lng: -82.995120}, // north west
+          		{lat: 39.977043, lng: -82.993446}, // south west
+          		{lat: 39.979345, lng: -82.976924}, // south east
+          		{lat: 39.990789, lng: -82.972409},  // north east
+          		{lat: 39.991512, lng: -82.985455}
+        	];
+        	var area8 = [
+          		{lat: 39.987068, lng: -83.005517}, // north west
+          		{lat: 39.974309, lng: -83.002985}, // south west
+          		{lat: 39.975921, lng: -82.993715}, // south east
+          		{lat: 39.986674, lng: -82.994488}  // north east
+        	];
+        	var area5 = [
+          		{lat: 39.987242, lng: -83.008208}, // north west
+          		{lat: 39.973760, lng: -83.004860}, // south west
+          		{lat: 39.974309, lng: -83.002985}, // south east
+          		{lat: 39.987068, lng: -83.005517}  // north east
+        	];
+        	var area18 = [
+          		{lat: 39.987407, lng: -83.013873}, // north west
+          		{lat: 39.973891, lng: -83.014345}, // south west
+          		{lat: 39.973760, lng: -83.004860}, // south east
+          		{lat: 39.987242, lng: -83.008208}  // north east
+        	];
+        	var area3 = [
+          		{lat: 39.973189, lng: -83.022881}, // north west
+          		{lat: 39.951084, lng: -83.015672}, // south west
+          		{lat: 39.955098, lng: -82.983485}, // south east
+          		{lat: 39.977267, lng: -82.984000},  // north east
+          		{lat: 39.975921, lng: -82.993715},
+          		{lat: 39.974309, lng: -83.002985},
+          		{lat: 39.973760, lng: -83.004860},
+          		{lat: 39.973891, lng: -83.014345}
+        	];
+        	var area14 = [
+          		{lat: 39.964170, lng: -82.982995}, // north west
+          		{lat: 39.954861, lng: -82.981622}, // south west
+          		{lat: 39.953676, lng: -82.967202}, // south east
+          		{lat: 39.965880, lng: -82.968704}  // north east
+        	];
+        	var area9 = [
+          		{lat: 39.953045, lng: -82.996278}, // north west
+          		{lat: 39.952256, lng: -82.982459},
+          		{lat: 39.949854, lng: -82.975164}, // south west
+          		{lat: 39.949427, lng: -82.963877}, // south east
+          		{lat: 39.953111, lng: -82.963877}  // north east
+        	];
+        	var area6 = [
+          		{lat: 39.952568, lng: -82.997790}, // north west
+          		{lat: 39.939177, lng: -82.995215}, // south west
+          		{lat: 39.938947, lng: -82.990108}, // south east
+          		{lat: 39.952337, lng: -82.987361}  // north east
+        	];
+        	var area16 = [
+         		{lat: 39.939151, lng: -83.000466}, // north west
+          		{lat: 39.917299, lng: -83.010422}, // south west
+          		{lat: 39.916180, lng: -82.995402}, // south east
+          		{lat: 39.929542, lng: -82.995659},  // north east
+          		{lat: 39.928950, lng: -82.984158},
+          		{lat: 39.944152, lng: -82.983042},
+          		{lat: 39.944415, lng: -82.988449},
+          		{lat: 39.938947, lng: -82.990108}
+        	];
+        	var area2 = [
+          		{lat: 39.919852, lng: -82.965766}, // north west
+          		{lat: 39.890224, lng: -82.958642}, // south west
+          		{lat: 39.888709, lng: -82.930318}, // south east
+          		{lat: 39.906027, lng: -82.928859},  // north east
+          		{lat: 39.906620, lng: -82.938472},
+          		{lat: 39.918404, lng: -82.937356}
+        	];
+        	map.data.add({geometry: new google.maps.Data.Polygon([area0])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area12])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area4])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area1])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area13])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area11])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area7])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area19])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area15])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area17])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area10])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area8])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area5])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area18])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area3])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area14])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area9])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area6])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area16])});
+        	map.data.add({geometry: new google.maps.Data.Polygon([area2])});
+        	/*
+        	map.data.addListener('mouseover', function(event) {
+          		map.data.revertStyle();
+          		map.data.overrideStyle(event.feature, {fillColor: 'red'});
+        	});
+			*/
+        	map.data.addListener('mouseout', function(event) {
+          		map.data.revertStyle();
+        	});
+
+        	// "Center Map" button
+        	var centerControlDiv = document.createElement('div');
+        	var centerControl = new CenterControl(centerControlDiv, map);
+
+        	centerControlDiv.index = 1;
+        	map.controls[google.maps.ControlPosition.TOP_LEFT].push(centerControlDiv);
+
+        	// "Data for Selected Neighborhoods" button
+        	var neighborhoodsControlDiv = document.createElement('div');
+        	var neighborhoodsControl = new SelectedNeighborhoodControl(neighborhoodsControlDiv, map);
+
+        	neighborhoodsControlDiv.index = 1;
+        	map.controls[google.maps.ControlPosition.LEFT_TOP].push(neighborhoodsControlDiv);
+
+        	setMarkers(map);
+      	}
+
+      	// Data for the markers consisting of a name, a (Lat, Lng) and a zIndex for the
+      	// order in which these markers should display on top of each other.
+      	var neighborhood = [
+        	['Brittany Hills', 40.006214, -82.941720, 0],
+        	['Clintonville', 40.050184, -83.014110, 1],
+        	['Marion Franklin', 39.905303, -82.949544, 2],
+        	['Downtown Columbus', 39.965295, -83.001252, 4], //3
+        	['Easton', 40.050971, -82.915417, 11], //4
+        	['Short North', 39.979395, -83.004994, 12], //5 
+        	['German Village', 39.946909, -82.992726, 3], //6
+        	['Polaris North', 40.152846, -82.983004, 13], //7
+        	['Italian Village', 39.981248, -82.999681, 5], //8
+        	['Livingstion Park North', 39.953078, -82.979112, 6], //9
+        	['Milo-Grogan', 39.986185, -82.985765, 7], //10
+        	['Polaris South', 40.136473, -82.986966, 14], //11
+        	['Blendon Woods', 40.060545, -82.879000, 15], //12
+        	['North Linden', 40.035226, -82.980284, 8], //13
+        	['Olde Town East', 39.958940, -82.974455, 16], //14
+        	['South Linden', 40.005189, -82.977816, 9], //15
+        	['Merion Village', 39.933623, -82.992054, 17], //16
+        	['Weinland Park', 39.990741, -83.000499, 18], //17
+        	['Victorian Village', 39.980732, -83.009452, 10], //18
+        	['Old North Columbus', 40.010649, -83.007914, 19]
+      	];
+
+      	function setMarkers(map) {
+        // Adds markers to the map.
+        	for (var i = 0; i < neighborhood.length; i++) {
+          		var nbh = neighborhood[i];
+          		var marker = new google.maps.Marker({
+            		position: {lat: nbh[1], lng: nbh[2]},
+            		map: map,
+            		icon: "http://maps.google.com/mapfiles/marker_white.png",
+            		title: nbh[0],
+            		zIndex: nbh[3],
+          		});
+          		markerAssociatedEvents(marker);
+        	}
+      	}
+
+      	function markerAssociatedEvents(marker) {
+        	// event after click the icon
+        	var infowindow = new google.maps.InfoWindow({
+          	content: "<div>" + marker.title + "</div>"
+        });
+
+        marker.addListener('mouseover', function() {
+          	infowindow.open(marker.get('map'), marker);
+        });
+
+        marker.addListener('mouseout', function() {
+          	infowindow.close(marker.get('map'), marker);
+        });
+
+        marker.addListener('click', function() {
+          	if (selectedNeighborhoods[marker.zIndex] == 0 && numSelected < numLimited) {
+            	selectedNeighborhoods[marker.zIndex] = 1;
+            	numSelected += 1;
+            	marker.setIcon("http://maps.google.com/mapfiles/marker_green.png",); 
+            	console.log(selectedNeighborhoods[marker.zIndex]);
+          	}
+          	else if (selectedNeighborhoods[marker.zIndex] == 1) {
+            	selectedNeighborhoods[marker.zIndex] = 0;
+            	numSelected -= 1;
+            	marker.setIcon("http://maps.google.com/mapfiles/marker_white.png",); 
+            	console.log(selectedNeighborhoods[marker.zIndex]);
+          	}
+        });
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsB3c4hxQ6GzlPa46UHygw6wxEm-M9KFk&callback=initMap">
+    </script>
+  </body>
+</html>

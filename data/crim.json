@@ -1,0 +1,582 @@
+[
+    {
+        "categorie": "Brittany Hills", 
+        "values": [
+            {
+                "value": 24, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 7, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Clintonville", 
+        "values": [
+            {
+                "value": 37, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 4, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Marion Franklin", 
+        "values": [
+            {
+                "value": 48, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 28, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 12, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "German Village", 
+        "values": [
+            {
+                "value": 34, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 9, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Assault"
+            },
+            {
+                "value": 6, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    },  
+    {
+        "categorie": "Downtown Columbus", 
+        "values": [
+            {
+                "value": 91, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 33, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 23, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Italian Village", 
+        "values": [
+            {
+                "value": 22, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 5, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 7, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Livingstion Park North", 
+        "values": [
+            {
+                "value": 22, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 9, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 5, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Milo-Grogan", 
+        "values": [
+            {
+                "value": 35, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 20, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 15, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "North Linden", 
+        "values": [
+            {
+                "value": 559, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 175, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 302, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "South Linden", 
+        "values": [
+            {
+                "value": 160, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 73, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 97, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Victorian Village", 
+        "values": [
+            {
+                "value": 16, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 1, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Easton", 
+        "values": [
+            {
+                "value": 115, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 37, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Assault"
+            },
+            {
+                "value": 9, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 5, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Short North", 
+        "values": [
+            {
+                "value": 52, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 15, 
+                "rate": "Assault"
+            },
+            {
+                "value": 4, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Polaris North", 
+        "values": [
+            {
+                "value": 14, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 1, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Polaris South", 
+        "values": [
+            {
+                "value": 9, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 5, 
+                "rate": "Assault"
+            },
+            {
+                "value": 1, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Blendon Woods", 
+        "values": [
+            {
+                "value": 5, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 3, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 5, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Olde Town East", 
+        "values": [
+            {
+                "value": 43, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 13, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Assault"
+            },
+            {
+                "value": 11, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Merion Village", 
+        "values": [
+            {
+                "value": 112, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 56, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 30, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Weinland Park", 
+        "values": [
+            {
+                "value": 58, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 23, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 22, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    },
+    {
+        "categorie": "Old North Columbus", 
+        "values": [
+            {
+                "value": 69, 
+                "rate": "Theft"
+            }, 
+            {
+                "value": 20, 
+                "rate": "Burglary"
+            }, 
+            {
+                "value": 17, 
+                "rate": "Assault"
+            },
+            {
+                "value": 0, 
+                "rate": "Robbery"
+            },
+            {
+                "value": 0, 
+                "rate": "Vandalism"
+            },
+            {
+                "value": 0, 
+                "rate": "Arrests"
+            }
+        ]
+    }
+]

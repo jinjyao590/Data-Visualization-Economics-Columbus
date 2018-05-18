@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Selected Neighborhoods Data</title>
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .navbar a {
+        float: right;
+        font-size: 16px;
+        color: #a184b2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navbar .item_nohover{
+        float: right;
+        font-size: 16px;
+        color: #666666;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .item {
+        float: right;
+        overflow: hidden;
+      }
+
+      .item_nohover {
+        float: right;
+        overflow: hidden;
+      }
+
+      .item_l {
+        float: left;
+        overflow: hidden;
+      }
+
+      .item .itembtn {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: #666666;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .item_nohover .itembtn {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: #666666;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .item_l .itembtn {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: #666666;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar .item:hover .itembtn {
+        background-color: white;
+        color: #6dd895;
+        text-decoration: underline;
+      }
+
+      .navbar .item_l:hover .itembtn {
+        background-color: white;
+        color: #6dd895;
+        text-decoration: underline;
+      }
+
+      .navbar a:hover {
+        background-color: white;
+        color: #6dd895;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="item_l">
+        <a href="neighborhoodsMap.html">MAP</a>
+      </div>
+      <div class="item">
+        <button class="itembtn" onclick="getResult('SAFETY');">SAFETY 
+          <i class="fa fa-caret-down"></i>
+        </button>
+      </div>
+      <div class="item">
+        <button class="itembtn" onclick="getResult('TRAFFIC');">TRAFFIC
+          <i class="fa fa-caret-down"></i>
+        </button>
+      </div>
+      <div class="item">
+        <button class="itembtn" onclick="getResult('HOUSINGTYPE');">HOUSING TYPE 
+          <i class="fa fa-caret-down"></i>
+        </button>
+      </div> 
+      <div class="item">
+        <button class="itembtn" onclick="getResult('ENTERTAINMENT');">ENTERTAINMENT 
+          <i class="fa fa-caret-down"></i>
+        </button>
+      </div> 
+      <div class="item">
+        <button class="itembtn" onclick="getResult('INCOME');">INCOME 
+          <i class="fa fa-caret-down"></i>
+        </button>
+      </div> 
+      <div class="item">
+        <button class="itembtn" onclick="getResult('EDUCATION');">EDUCATION
+          <i class="fa fa-caret-down"></i>
+        </button>
+      </div>
+      <div class="item_nohover">Type</div> 
+    </div>
+    <p id="selectCat"></p>
+  	<script type="text/javascript">
+      var selectedNeighborhoods = new Array();
+      getSelectedNeighborhoods();
+      console.log(selectedNeighborhoods);
+
+      /*
+      var neighborhoods = new Array();
+      neighborhoods[0] = 'Brittany Hills';
+      neighborhoods[1] = 'Clintonville';
+      neighborhoods[2] = 'Marion Franklin';
+      neighborhoods[4] = 'Downtown Columbus';
+      neighborhoods[11] = 'Easton';
+      neighborhoods[12] = 'Short North';
+      neighborhoods[3] = 'German Village';
+      neighborhoods[13] = 'Polaris North';
+      neighborhoods[5] = 'Italian Village';
+      neighborhoods[6] = 'Livingstion Park North';
+      neighborhoods[7] = 'Milo-Grogan';
+      neighborhoods[14] = 'Polaris South';
+      neighborhoods[15] = 'Blendon Woods';
+      neighborhoods[8] = 'North Linden';
+      neighborhoods[16] = 'Olde Town East';
+      neighborhoods[9] = 'South Linden';
+      neighborhoods[17] = 'Merion Village';
+      neighborhoods[18] = 'Weinland Park';
+      neighborhoods[10] = 'Victorian Village';
+      neighborhoods[19] = 'Old North Columbus';
+      */
+
+  	  function getSelectedNeighborhoods() {
+        arr = sessionStorage.getItem("selectedNeighborhoods");
+        for (var i = 0; i < arr.length; i += 2)
+          selectedNeighborhoods[i / 2] = arr[i];
+      }
+
+      function getResult(type) {
+        /*
+        var output = "Results of category " + type + " between neighborhoods: ";
+        var first = 1;
+        for (var i = 0; i < selectedNeighborhoods.length; i += 1) {
+          if (selectedNeighborhoods[i] == 1) {
+            console.log(i);
+            if (first == 0) 
+              output += ", " + neighborhoods[i];
+            else {
+              output += neighborhoods[i];
+              first = 0;
+            }
+          }
+        }
+        document.getElementById("selectCat").innerHTML = output;
+        */
+        var targetFile = "graph" + type + ".html";
+        sessionStorage.setItem("selectedNeighborhoods", selectedNeighborhoods);
+              console.log(selectedNeighborhoods);
+              window.open(targetFile,"_self");
+      }
+  	</script>
+  </body>
+</html>

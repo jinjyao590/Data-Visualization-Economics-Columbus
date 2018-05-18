@@ -1,0 +1,31 @@
+/*HTML Vertical Lengend*/
+
+.key-dot {
+    display: inline-block;
+    height: 20px;
+    margin-right: .5em;
+    width: 20px;
+}
+
+.legend1 {
+	margin-left: 30%;
+}
+
+.legend {
+/*	margin-left: 25%;
+    margin-right:20px;*/
+    float:left;
+    margin-right: 1em;
+    font-size: 20px;
+}
+
+.first { background: #a184b2;}
+.second { background: #28a0b2;}
+.third { background: #3adbdb;}
+.fourth { background: #6dd895;}
+.fifth { background: #b7d36a;}
+
+/*HTML Horizonal Legend*/
+.income_groups {
+    margin: 12 !important;
+}

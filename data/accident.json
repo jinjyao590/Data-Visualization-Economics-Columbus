@@ -1,0 +1,342 @@
+[
+    {
+        "categorie": "Brittany Hills", 
+        "values": [
+            {
+                "value": 40, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 37, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Clintonville", 
+        "values": [
+            {
+                "value": 293, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 170, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Marion Franklin", 
+        "values": [
+            {
+                "value": 49, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 29, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "German Village", 
+        "values": [
+            {
+                "value": 35, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 18, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    },  
+    {
+        "categorie": "Downtown Columbus", 
+        "values": [
+            {
+                "value": 68, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 46, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Italian Village", 
+        "values": [
+            {
+                "value": 60, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 50, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Livingstion Park North", 
+        "values": [
+            {
+                "value": 138, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 96, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Milo-Grogan", 
+        "values": [
+            {
+                "value": 27, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 22, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "North Linden", 
+        "values": [
+            {
+                "value": 47, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 42, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "South Linden", 
+        "values": [
+            {
+                "value": 40, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 33, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Victorian Village", 
+        "values": [
+            {
+                "value": 88, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 43, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Easton", 
+        "values": [
+            {
+                "value": 273, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 109, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Short North", 
+        "values": [
+            {
+                "value": 58, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 37, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Polaris North", 
+        "values": [
+            {
+                "value": 37, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 17, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Polaris South", 
+        "values": [
+            {
+                "value": 94, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 50, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Blendon Woods", 
+        "values": [
+            {
+                "value": 56, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 33, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Olde Town East", 
+        "values": [
+            {
+                "value": 39, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 43, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Merion Village", 
+        "values": [
+            {
+                "value": 55, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 51, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 9, 
+                "rate": "Deaths"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Weinland Park", 
+        "values": [
+            {
+                "value": 76, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 21, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 0, 
+                "rate": "Deaths"
+            }
+        ]
+    },
+    {
+        "categorie": "Old North Columbus", 
+        "values": [
+            {
+                "value": 133, 
+                "rate": "Crashes"
+            }, 
+            {
+                "value": 66, 
+                "rate": "Injuries"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Deaths"
+            }
+        ]
+    }
+]

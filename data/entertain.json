@@ -1,0 +1,582 @@
+[
+    {
+        "categorie": "Brittany Hills", 
+        "values": [
+            {
+                "value": 12, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 7, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 3, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 5, 
+                "rate": "Park"
+            },
+            {
+                "value": 3, 
+                "rate": "Museum"
+            },
+            {
+                "value": 14, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Clintonville", 
+        "values": [
+            {
+                "value": 10, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 7, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 2, 
+                "rate": "Park"
+            },
+            {
+                "value": 1, 
+                "rate": "Museum"
+            },
+            {
+                "value": 7, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Marion Franklin", 
+        "values": [
+            {
+                "value": 7, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 1, 
+                "rate": "Park"
+            },
+            {
+                "value": 6, 
+                "rate": "Museum"
+            },
+            {
+                "value": 3, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "German Village", 
+        "values": [
+            {
+                "value": 17, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 8, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 4, 
+                "rate": "Park"
+            },
+            {
+                "value": 3, 
+                "rate": "Museum"
+            },
+            {
+                "value": 4, 
+                "rate": "Gym"
+            }
+        ]
+    },  
+    {
+        "categorie": "Downtown Columbus", 
+        "values": [
+            {
+                "value": 6, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 7, 
+                "rate": "Park"
+            },
+            {
+                "value": 3, 
+                "rate": "Museum"
+            },
+            {
+                "value": 6, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Italian Village", 
+        "values": [
+            {
+                "value": 15, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 9, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 3, 
+                "rate": "Park"
+            },
+            {
+                "value": 1, 
+                "rate": "Museum"
+            },
+            {
+                "value": 9, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Livingstion Park North", 
+        "values": [
+            {
+                "value": 9, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 3, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 3, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 6, 
+                "rate": "Park"
+            },
+            {
+                "value": 2, 
+                "rate": "Museum"
+            },
+            {
+                "value": 8, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Milo-Grogan", 
+        "values": [
+            {
+                "value": 13, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 6, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 2, 
+                "rate": "Park"
+            },
+            {
+                "value": 1, 
+                "rate": "Museum"
+            },
+            {
+                "value": 4, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "North Linden", 
+        "values": [
+            {
+                "value": 8, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 1, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 6, 
+                "rate": "Park"
+            },
+            {
+                "value": 2, 
+                "rate": "Museum"
+            },
+            {
+                "value": 7, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "South Linden", 
+        "values": [
+            {
+                "value": 6, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 5, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 7, 
+                "rate": "Park"
+            },
+            {
+                "value": 2, 
+                "rate": "Museum"
+            },
+            {
+                "value": 1, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Victorian Village", 
+        "values": [
+            {
+                "value": 9, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 3, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 8, 
+                "rate": "Park"
+            },
+            {
+                "value": 2, 
+                "rate": "Museum"
+            },
+            {
+                "value": 8, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Easton", 
+        "values": [
+            {
+                "value": 15, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 5, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 2, 
+                "rate": "Park"
+            },
+            {
+                "value": 6, 
+                "rate": "Museum"
+            },
+            {
+                "value": 4, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Short North", 
+        "values": [
+            {
+                "value": 9, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 19, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 3, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 7, 
+                "rate": "Park"
+            },
+            {
+                "value": 1, 
+                "rate": "Museum"
+            },
+            {
+                "value": 16, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Polaris North", 
+        "values": [
+            {
+                "value": 9, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 6, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 5, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 8, 
+                "rate": "Park"
+            },
+            {
+                "value": 2, 
+                "rate": "Museum"
+            },
+            {
+                "value": 11, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Polaris South", 
+        "values": [
+            {
+                "value": 7, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 3, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 2, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 1, 
+                "rate": "Park"
+            },
+            {
+                "value": 4, 
+                "rate": "Museum"
+            },
+            {
+                "value": 13, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Blendon Woods", 
+        "values": [
+            {
+                "value": 9, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 7, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 5, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 5, 
+                "rate": "Park"
+            },
+            {
+                "value": 7, 
+                "rate": "Museum"
+            },
+            {
+                "value": 12, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Olde Town East", 
+        "values": [
+            {
+                "value": 16, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 12, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 5, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 2, 
+                "rate": "Park"
+            },
+            {
+                "value": 6, 
+                "rate": "Museum"
+            },
+            {
+                "value": 13, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Merion Village", 
+        "values": [
+            {
+                "value": 7, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 3, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 8, 
+                "rate": "Park"
+            },
+            {
+                "value": 6, 
+                "rate": "Museum"
+            },
+            {
+                "value": 9, 
+                "rate": "Gym"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Weinland Park", 
+        "values": [
+            {
+                "value": 9, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 12, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 6, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 4, 
+                "rate": "Park"
+            },
+            {
+                "value": 2, 
+                "rate": "Museum"
+            },
+            {
+                "value": 9, 
+                "rate": "Gym"
+            }
+        ]
+    },
+    {
+        "categorie": "Old North Columbus", 
+        "values": [
+            {
+                "value": 7, 
+                "rate": "Restaurant"
+            }, 
+            {
+                "value": 4, 
+                "rate": "Store"
+            }, 
+            {
+                "value": 8, 
+                "rate": "Movie Theater"
+            },
+            {
+                "value": 2, 
+                "rate": "Park"
+            },
+            {
+                "value": 4, 
+                "rate": "Museum"
+            },
+            {
+                "value": 11, 
+                "rate": "Gym"
+            }
+        ]
+    }
+]

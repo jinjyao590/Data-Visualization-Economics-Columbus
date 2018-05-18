@@ -1,0 +1,582 @@
+[
+    {
+        "categorie": "Brittany Hills", 
+        "values": [
+            {
+                "value": 863, 
+                "rate": "Studio"
+            }, 
+            {
+                "value": 884, 
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 969,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1074,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1330, 
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1530, 
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Clintonville", 
+        "values": [
+            {
+                "value": 669,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 869, 
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1021,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1120,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1286, 
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1384, 
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Marion Franklin", 
+        "values": [
+            {
+                "value": 494,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 600,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 677,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 720,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 779, 
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 870, 
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "German Village", 
+        "values": [
+            {
+                "value": 791,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 1229,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1387,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1542,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1544, 
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1766, 
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Downtown Columbus", 
+        "values": [
+            {
+                "value": 791,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 1223,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1463,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1598,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1655, 
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1875, 
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Italian Village", 
+        "values": [
+            {
+                "value": 792,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 1205,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1463,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1765,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1972,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 2104, 
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Livingstion Park North", 
+        "values": [
+            {
+                "value": 471,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 583,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 698,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 766,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 801,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 908,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Milo-Grogan", 
+        "values": [
+            {
+                "value": 798,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 1075,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1409,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1876,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 2209,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 2433,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "North Linden", 
+        "values": [
+            {
+                "value": 429,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 557,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 688,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 756,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 806,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 898,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "South Linden", 
+        "values": [
+            {
+                "value": 463,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 576,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 690,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 786,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 876,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 903,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Victorian Village", 
+        "values": [
+            {
+                "value": 792,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 1205,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1423,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1654,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1903,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 2210,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Easton", 
+        "values": [
+            {
+                "value": 863,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 895,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 969,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1102,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1330,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1432,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Short North", 
+        "values": [
+            {
+                "value": 792,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 1205,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1529,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1765,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1990,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 2102,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Polaris North", 
+        "values": [
+            {
+                "value": 882,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 1041,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1283,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 135,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1563,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1633,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Polaris South", 
+        "values": [
+            {
+                "value": 802,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 998,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1190,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1302,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1530,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1635,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Blendon Wood", 
+        "values": [
+            {
+                "value": 533,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 833,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1032,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1210,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1369,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1420,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Olde Town East", 
+        "values": [
+            {
+                "value": 715,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 867,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1087,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1523,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1877,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1920,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Merion Village", 
+        "values": [
+            {
+                "value": 494,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 729,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 867,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 887,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 980,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1001,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Weinland Park", 
+        "values": [
+            {
+                "value": 798,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 1075,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1409,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1675,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 2298,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 2356,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    },
+    {
+        "categorie": "Old North Columbus", 
+        "values": [
+            {
+                "value": 715,
+                "rate": "Studio"
+            }, 
+            {
+                "value": 845,
+                "rate": "1 Bed 1 Bath"
+            }, 
+            {
+                "value": 1031,
+                "rate": "2 Beds 1 Bath"
+            }, 
+            {
+                "value": 1344,
+                "rate": "2 Beds 2 Baths"
+            }, 
+            {
+                "value": 1706,
+                "rate": "3 Beds 1 Bath"
+            },
+            {
+                "value": 1870,
+                "rate": "3 Beds 2 Baths"
+            }
+        ]
+    }
+]
